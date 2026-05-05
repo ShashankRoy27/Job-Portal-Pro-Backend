@@ -16,7 +16,6 @@ import java.util.List;
 @Entity
 public class JobPost {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int postId;
     private String postProfile;
     private String postDesc;
