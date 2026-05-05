@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {
+        "http://localhost:3000",
+        "https://job-portal-pro-frontend.onrender.com"
+})
 public class JobRestController {
 
     @Autowired
