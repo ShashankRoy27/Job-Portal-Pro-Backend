@@ -2,6 +2,8 @@ package com.example.spring_boot_rest.model;
 
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,6 +19,7 @@ import java.util.List;
 @Entity
 public class JobPost {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int postId;
     private String postProfile;
     private String postDesc;
