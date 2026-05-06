@@ -24,6 +24,6 @@ public class JobPost {
 
     @ElementCollection
     private List<String> postTechStack;
-
+    @Column(nullable = false)
     private boolean active = true;
 }
