@@ -15,6 +15,13 @@ public interface JobRepo extends JpaRepository<JobPost, Integer> {
 
     List<JobPost> findByPostProfileContainingOrPostDescContainingIgnoreCase(String postProfile, String postDescription);
 
+    List<JobPost> findByActiveTrue();
+
+    List<JobPost> findByActiveTrueAndPostProfileContainingOrActiveTrueAndPostDescContainingIgnoreCase(
+            String profileKeyword,
+            String descKeyword
+    );
+
 }
 
 //List<JobPost> jobs = new ArrayList<>(Arrays.asList(
